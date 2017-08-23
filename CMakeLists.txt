@@ -13,7 +13,7 @@ install(TARGETS clangtest RUNTIME DESTINATION bin)
 add_custom_target(test ./clangtest DBASE_LOG_NAMESPACE=taskmanagement -DOROCOS_TARGET=gnulinux -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_SHARED -D_INFO 
     -D__OSVERSION__=2 -D__linux__ -D__x86_64__ 
     -I${CMAKE_SOURCE_DIR}/test/include 
-    -I/usr/include/eigen3 
+    -I${CMAKE_SOURCE_DIR}/test/include/eigen3 
     -I${CMAKE_SOURCE_DIR}/test/include/orocos 
     -I${CMAKE_SOURCE_DIR}/test/include/pcl-1.8
     -fuse-ld=gold -std=c++11 
