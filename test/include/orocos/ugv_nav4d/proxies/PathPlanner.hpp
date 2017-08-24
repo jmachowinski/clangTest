@@ -28,7 +28,7 @@ extern template class RTT::Property< ::ugv_nav4d::TraversabilityConfig >;
 #include <orogen_metadata/Metadata.hpp>
 extern template class RTT::Attribute< ::metadata::TaskContext >;
 
-#include </usr/include/boost/shared_ptr.hpp>
+#include <boost/shared_ptr.hpp>
 #include <vizkit3d_debug_drawings/commands/CommandBuffer.h>
 extern template class RTT::OutputPort< ::boost::shared_ptr< ::vizkit3dDebugDrawings::CommandBuffer > >;
 extern template class RTT::base::ChannelElement< ::boost::shared_ptr< ::vizkit3dDebugDrawings::CommandBuffer > >;
