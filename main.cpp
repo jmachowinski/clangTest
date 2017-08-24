@@ -16,11 +16,11 @@ int main(int argc, char **argv) {
                             | CXTranslationUnit_CacheCompletionResults
                             | CXTranslationUnit_CreatePreambleOnFirstParse;
 
+    std::cout << "Parse start, file " << argv[1] << std::endl;
     high_resolution_clock::time_point start = high_resolution_clock::now();
     
-    std::cout << "Parse start" << std::endl;
     
-    clang_parseTranslationUnit2(idx, "../test/tdot_asguard.cpp", argv, argc, nullptr, 0, options, &TU);
+    clang_parseTranslationUnit2(idx, argv[1], argv + 2, argc - 2, nullptr, 0, options, &TU);
 
     high_resolution_clock::time_point end = high_resolution_clock::now();
     std::cout << "Parse took " << duration_cast<duration<double>>(end-start).count() << std::endl;
